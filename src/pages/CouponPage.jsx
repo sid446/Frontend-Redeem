@@ -101,7 +101,7 @@ function CouponPage() {
                     <h4 className='text-sm text-zinc-500'>Valid within 1 week of redemption.</h4>
                     <img 
                         className='w-[1.5rem] h-[1.5rem] cursor-pointer' 
-                        src={download} 
+                        src="https://asset.cloudinary.com/db2qa9dzs/16662249b37a35a0f62371d0fed4006e" 
                         alt="Download" 
                         onClick={handleDownload} 
                     />
