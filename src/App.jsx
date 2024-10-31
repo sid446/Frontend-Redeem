@@ -1,16 +1,21 @@
+
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useRoutes } from 'react-router-dom';
 import CouponPage from './pages/CouponPage.jsx';
 import QrCheckPage from './pages/QrCheckPage.jsx';
+
+const AppRoutes = () => {
+  return useRoutes([
+    { path: "/", element: <QrCheckPage /> },
+    { path: "/access", element: <QrCheckPage /> },
+    { path: "/coupon", element: <CouponPage /> },
+  ]);
+};
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<QrCheckPage />} />
-        <Route path="/access" element={<QrCheckPage />} />
-        <Route path="/coupon" element={<CouponPage />} />
-      </Routes>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
