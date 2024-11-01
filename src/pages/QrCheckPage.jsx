@@ -87,19 +87,19 @@ function QrCheckPage() {
             <Confetti width={window.innerWidth} height={window.innerHeight} />
         )}
         
-        <div className="h-screen w-screen flex justify-center items-center bg-[#95C1D9] border-[1rem] border-[#F5D05A] shadow-md shadow-gray-500/50 bg-[url('https://www.transparenttextures.com/patterns/paper.png')] bg-repeat">
+        <div className="h-screen w-screen  flex justify-center items-center bg-[#95C1D9] border-[1rem] border-[#F5D05A] shadow-md shadow-gray-500/50 bg-[url('https://www.transparenttextures.com/patterns/paper.png')] bg-repeat">
             
-            <div className={`${qrUsed === false ? 'top-[33%]' : 'top-[27%]'} h-[3rem] w-[3rem] rounded-full bg-[#95C1D9] bg-[url('https://www.transparenttextures.com/patterns/paper.png')] bg-repeat absolute left-4`}></div>
-            <div className={`${qrUsed === false ? 'top-[33%]' : 'top-[27%]'} h-[3rem] w-[3rem] rounded-full bg-[#95C1D9] bg-[url('https://www.transparenttextures.com/patterns/paper.png')] bg-repeat absolute right-4`}></div>
+            <div className={`${qrUsed === false ? 'top-[33%]' : 'top-[27%]'} h-[3rem] w-[3rem] rounded-full bg-[#95C1D9] bg-[url('https://www.transparenttextures.com/patterns/paper.png')] bg-repeat absolute left-[4vw] md:absolute md:left-[8vw] sm:left-[7vw]`}></div>
+            <div className={`${qrUsed === false ? 'top-[33%]' : 'top-[27%]'} h-[3rem] w-[3rem] rounded-full bg-[#95C1D9] bg-[url('https://www.transparenttextures.com/patterns/paper.png')] bg-repeat absolute right-[4vw] md:absolute md:right-[8vw] sm:right-[7vw] `}></div>
 
-            <div className={`${qrUsed === null ? 'h-[40vh]' : qrUsed === false ? 'h-[65vh]' : 'h-[40vh]'} w-[80vw] flex flex-col items-center justify-center bg-[#F5D05A] shadow-md border border-gray-300 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] bg-repeat`}>
+            <div className={`${qrUsed === null ? 'h-[40vh] md:h-[60vh] w-[80vw] md:w-[50vw]' : qrUsed === false ? 'h-[65vh]' : 'h-[40vh]'} w-[80vw] flex flex-col items-center justify-center bg-[#F5D05A] shadow-md border border-gray-300 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] bg-repeat`}>
                 
                 {/* Render Content Based on QR Status */}
                 {qrUsed === null ? (
-                    <div className="h-[40vh] flex flex-col items-center justify-center text-center gap-4">
-                        <h1 className="text-4xl text-[#95C1D9] font-bold">Oops!!</h1>
-                        <p className="text-3xl text-white font-bold">UUID not found or invalid QR code</p>
-                        <p className="text-3xl text-white font-bold">Please try again with a valid QR code</p>
+                    <div className="h-[40vh]  flex flex-col items-center justify-center text-center gap-4 md:gap-[5rem]">
+                        <h1 className="text-4xl md:text-7xl text-[#95C1D9] font-bold">Oops!!</h1>
+                        <p className="text-3xl md:text-4xl text-white  font-bold">UUID not found or invalid QR code</p>
+                        <p className="text-3xl md:text-4xl text-white font-bold">Please try again with a valid QR code</p>
                     </div>
                 ) : qrUsed === true ? (
                     <div className="h-[40vh] flex flex-col items-center justify-center text-center gap-4">
@@ -108,13 +108,13 @@ function QrCheckPage() {
                         <p className="text-3xl text-white font-bold">Try again with another QR code</p>
                     </div>
                 ) : (
-                    <div className="h-[65vh] flex flex-col items-center text-center gap-8">
+                    <div className="h-[65vh]  w-full flex flex-col items-center text-center gap-8">
                         <div className="w-full h-[27%] flex justify-center items-center border-dashed border-b-2 border-black">
                             <h1 className="text-6xl font-bold text-gray-800">COUPON</h1>
                         </div>
                         <div className="flex flex-col gap-10">
-                            <p className="text-4xl text-[#95C1D9] font-bold">Congratulations!</p>
-                            <p className="text-3xl text-white font-bold">Thank you for making our environment more beautiful</p>
+                            <p className="text-4xl md:text-5xl sm:text-3xl text-[#95C1D9]  font-bold">Congratulations!</p>
+                            <p className="text-3xl text-white  font-bold">Thank you for making our environment more beautiful</p>
                             <p className="text-3xl text-white font-bold">Here is your reward</p>
                         </div>
                         <Link 
